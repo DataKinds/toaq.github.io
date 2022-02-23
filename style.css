@@ -707,6 +707,44 @@ img.jemu{
 	margin-top: 14px;
 	width: 100%;
 }
+
+.glossgrid {
+	display: grid;
+	flex: 0 0 auto;
+	/* this can't be set on .glossgrid, else it will copy to all instances of this class... */
+	grid-template-columns:  repeat(auto-fill, minmax(4em, auto));
+	grid-auto-flow: row;
+	overflow-x: auto;
+	border-right: 5px solid #00000000;
+	align-content: end;
+}
+.glossgrid > .word {
+	color: black;
+	width: auto;
+	font-weight: bold;
+	padding: 7px 0;
+
+}
+.glossgrid > .word.toaq {
+	grid-row-start: 1;
+	border-bottom: 5px solid #197A92;
+}
+.glossgrid > .word.gloss {
+	grid-row-start: 2;
+	border-bottom: 5px solid #197A92;
+	background-color: #a7e1f1;
+	white-space: nowrap;
+}
+.glossgrid > .end {
+	border-right: 5px solid #197A92;
+}
+.translation {
+	flex: 1 0 100%;
+	padding: 7px;
+	border-right: 5px solid #197A92;
+	margin-right: 5px;
+}
+
 .button {
 	float: left;	
 	display: block;

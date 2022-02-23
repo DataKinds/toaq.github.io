@@ -16,22 +16,11 @@ title: Sentence structure
 <img class="diagram" src="../../assets/images/diagrams/sentencetemplate.svg" width="850px;"></img>
 <div class="textbody"><div class="welcome-content">
 
-<button class="listen" onclick="PlaySound('keo súhu bı jỉa kỉaı jí hó nha')">
-<table class="example">
-    <tr>
-      <th><div class="exindent"></div></th>
-      <th>Keo</th><th>súhu</th><th>bı</th><th>jỉa</th><th>kỉaı</th><th>jí</th><th>hó</th><th>nha.</th>
-    </tr>
-    <tr>
-      <td class="left"></td>
-      <td>but</sup></td><td>the-pig</td><td>TOP</td><td>FUT</td><td>take.care</td><td>I</td><td>them</td><td>PRM</td><td class="right"></td>
-    </tr>
-    <tr>
-      <td class="left"></td>
-      <td colspan="8">"But as for the pigs, I promise to take care of them."</td><td class="right"></td>
-    </tr>
-  </table><div style="clear:both;"></div>
-</button>
+{% include gloss.html 
+  toaq="Keo súhu bı jỉa kỉaı jí hó nha." 
+  gloss="but the-pig TOP FUT taake.care I them PRM"
+  translation="But as for the pigs, I promise to take care of them."
+  audio="/letters/sounds/oaq.mp3" %}
 
 <p>Out of the indicated components, almost all are optional. The only obligatory components, which are present in every sentence, are the verbal complex and illocution (and, technically, the complementizer, which is usually covert in declarative and non-polar interrogative matrix clauses).</p>
 
@@ -57,6 +46,11 @@ title: Sentence structure
     </tr>
   </table><div style="clear:both;"></div>
 </button>
+
+{% include gloss.html 
+  toaq="Mả rủqshua moq?" 
+  gloss="C<sup>[+int]</sup> rain INT"
+  translation="Is it raining?" %}
 
 <p>Each constituent will be dealt with in detail over the course of this description.
 </p>

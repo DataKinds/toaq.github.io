@@ -1,0 +1,22 @@
+{% assign toaq_words = include.toaq|split:" " %}
+{% assign gloss_words = include.gloss|split:" " %}
+{% assign translation = include.translation %}
+{% assign audio = include.audio %}
+
+<div class="glossgrid" >
+    {% for word in toaq_words %}
+        <div class="word toaq">{{ word }}</div>
+    {% endfor %}
+    {% for word in gloss_words %}
+        {% if forloop.last %}
+            <div class="word gloss end">{{ word }}</div>
+        {% else %}
+            <div class="word gloss">{{ word }}</div>
+        {% endif %}
+    {% endfor %}
+</div>
+<div class="translation">"{{ translation }}"</div>
+{% if audio %}
+    <audio controls style="margin: 0 auto" src={{audio}}>Audio transcription of the toaq phrase above.</audio>
+{% endif %} 
+
